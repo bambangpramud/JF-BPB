@@ -20,27 +20,14 @@ public class SoalDua {
         int keyword = scn.nextInt();
 
         int[] val= {66,77,80,84,88,99,100};
-        int low = 0;
-        int high = val.length-1;
-        int med = 0;
-        boolean status = false;
+        boolean status = isStatus(val,keyword);
+        if (status==false){
+            System.out.println(keyword + " NOT FOUND!");
+        }
 
-       while (low<=high){
-           med=(low+high)/2;
-           if (keyword==val[med]){
-               System.out.println(keyword+" FOUNDED in position "+(med+1)+" and INDEX "+med);
-               status=true;
-               break;
-           } else if (keyword>val[med]){
-               low = med+1;
-           } else {
-               high = med-1;
-           }
 
-       }
-       if (status==false){
-           System.out.println(keyword + " NOT FOUND!");
-       }
+
+
 //
 //        for (int i = 0; i < val.length; i++)   {
 //            med = (high - low)/2;
@@ -59,5 +46,29 @@ public class SoalDua {
 //        if (status==false){
 //           System.out.println(keyword + " NOT FOUND!");
 //       }
+    }
+
+    static boolean isStatus(int[] val,int keyword){
+        int low = 0;
+        int high = val.length-1;
+        int med = 0;
+
+
+        while (low<=high){
+            med=(low+high)/2;
+            if (keyword==val[med]){
+                System.out.println(keyword+" FOUNDED in position "+(med+1)+" and INDEX "+med);
+
+                return true;
+            } else if (keyword>val[med]){
+                low = med+1;
+            } else {
+                high = med-1;
+            }
+
+        }
+
+
+        return false;
     }
 }
