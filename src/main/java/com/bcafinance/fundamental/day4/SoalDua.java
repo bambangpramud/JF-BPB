@@ -21,14 +21,11 @@ public class SoalDua {
 
         int[] val= {66,77,80,84,88,99,100};
         boolean status = isStatus(val,keyword);
-        if (status==false){
+        if (!status){
             System.out.println(keyword + " NOT FOUND!");
         }
 
 
-
-
-//
 //        for (int i = 0; i < val.length; i++)   {
 //            med = (high - low)/2;
 //            if (val[i] == keyword)  {
@@ -51,7 +48,7 @@ public class SoalDua {
     static boolean isStatus(int[] val,int keyword){
         int low = 0;
         int high = val.length-1;
-        int med = 0;
+        int med;
 
 
         while (low<=high){
@@ -71,4 +68,6 @@ public class SoalDua {
 
         return false;
     }
+
+
 }
