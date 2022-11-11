@@ -25,6 +25,7 @@ public class SoalSatu {
 
 
 
+
     }
 
     static boolean isFoundProcess(int[] intArr,int intA){
