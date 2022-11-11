@@ -28,7 +28,7 @@ public class LatihanSatu {
 
     public static void randomVoKon(int intOrder ,int intLength){
         String vocal = "aiueo";
-        String konsonan = "bcdefghjklmnpqrstvwxyz";
+        String konsonan = "bcdfghjklmnpqrstvwxyz";
         int rnFirst =0;
 
 
