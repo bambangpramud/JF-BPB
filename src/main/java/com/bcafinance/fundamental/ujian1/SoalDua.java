@@ -24,7 +24,7 @@ public class SoalDua {
 
         int intRandom= rn.nextInt(2);
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < intOrder; i++) {
             if (i==0){
                 if (intRandom==0){
                     System.out.print(Character.toUpperCase(strVocal.charAt(rn.nextInt(5))));
@@ -44,15 +44,15 @@ public class SoalDua {
             }
         }
 
-        intRandom= rn.nextInt(2);
-        for (int i = 0; i < intLength-intOrder; i++) {
 
+        for (int i = 0; i < intLength-intOrder; i++) {
+            intRandom= rn.nextInt(2);
             if (intRandom==0){
                 System.out.print(strVocal.charAt(rn.nextInt(5)));
-                intRandom=1;
+
             }else {
                 System.out.print(strConsonant.charAt(rn.nextInt(21)));
-                intRandom=0;
+
             }
         }
     }
