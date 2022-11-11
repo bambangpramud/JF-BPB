@@ -15,23 +15,32 @@ import java.util.Random;
 public class LatihanSatu {
 
     public static void main(String[] args) {
+
+
+
+
+        int intOrder = 6;
+        int intLength = 15;
+        randomVoKon(intOrder,intLength);
+
+
+    }
+
+    public static void randomVoKon(int intOrder ,int intLength){
         String vocal = "aiueo";
         String konsonan = "bcdefghjklmnpqrstvwxyz";
+        int rnFirst =0;
+
 
         Random rn = new Random();
 
-
-        int intOrder = 5;
-        int intLength = 10;
-        int rnFirst =0;
-
         for (int i = 0; i < intOrder; i++) {
             if (i==0){
-                 rnFirst = rn.nextInt(2);
+                rnFirst = rn.nextInt(2);
                 if (rnFirst==0){
-                    System.out.print(vocal.charAt(rn.nextInt(5)));
+                    System.out.print(Character.toUpperCase(vocal.charAt(rn.nextInt(5))));
                 }else {
-                    System.out.print(konsonan.charAt(rn.nextInt(21)));
+                    System.out.print(Character.toUpperCase(konsonan.charAt(rn.nextInt(21))));
                 }
             } else if (i%2==1){
                 if (rnFirst==0){
@@ -57,6 +66,5 @@ public class LatihanSatu {
                 System.out.print(konsonan.charAt(rn.nextInt(21)));
             }
         }
-
     }
 }
