@@ -57,7 +57,7 @@ public class LatihanSatu {
             }
 
         }
-
+        System.out.print("  ");
         for (int i = 0; i < intLength-intOrder; i++) {
             rnFirst = rn.nextInt(2);
             if (rnFirst==0){
